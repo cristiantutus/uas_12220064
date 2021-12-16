@@ -84,19 +84,6 @@ elif option == 'Jumlah Produksi Minyak':
                 sort_pertum
 
                 # Untuk jawaban 1 d
-                # st.write("Data Lengkap Negara :")
-
-                # st.text("Nama Negara : {}".format(negara['name']))
-                # st.text("Kode Negara : {}".format(negara['alpha-3']))
-                # st.text("Region dan Sub Region : {}, {} \n".format(negara['region'], negara['sub-region']))
-
-                # st.text("======================================================================================")
-                # st.text("Produksi Terkecil : {}".format(chart_data.min()))
-                # st.text("Produksi Terkecil Keseruhan : ")
-                # sort_pertum2 = chart_pertum.sort_values(by=[negara['alpha-3']], ascending=True)
-
-                # st.line_chart(sort_pertum2)
-                # sort_pertum2
                 df_year = dm.loc[dm['tahun'] == in_tahun]
                 df_year.sort_values(by=['produksi'], ascending=False, inplace=True)
                 df_year.reset_index(drop=True, inplace=True)
