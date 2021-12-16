@@ -28,6 +28,12 @@ elif option == 'Jumlah Produksi Minyak':
     txt_negara = st.text_input('Masukan Nama Negara :')
     dm = pd.read_csv('data/produksi_minyak_mentah.csv')
     df_js = pd.read_json('data/kode_negara_lengkap.json')
+    arr = []
+    for i in list(dm['kode_negara']) :
+        if i not in list(df_js['alpha-3']) :
+            arr.append(i)
+    for i in arr :
+        dm = dm[dm.kode_negara != i]
 
     if txt_negara:
         for negara in data_n:
