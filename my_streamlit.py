@@ -8,7 +8,7 @@ data_n = json.load(f)
 
 option = st.sidebar.selectbox(
     'Silakan pilih:',
-    ('Home','Dataframe','Jumlah Produksi Minyak')
+    ('Home','Jumlah Produksi Minyak')
 )
 
 if option == 'Home' or option == '':
